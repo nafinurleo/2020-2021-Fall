@@ -1,0 +1,34 @@
+Name: Nafinur Leo
+Id: 20-42195-1
+
+Labtask 03
+
+1.select sysdate "Date"
+from dual;
+
+2.select empno,ename,sal,round(sal*1.15) "Increase"
+from emp;
+
+3.select empno,ename,round(sal*1.15)-sal "Increase"
+from emp;
+
+4.select ename,hiredate,to_char(next_day(add_months(hiredate,6),'Monday'),'day,"The" ddspth "of" month,yyyy') "REVIEW"
+from emp;
+
+5.select ename,round(sysdate-hiredate) "MONTHS_WORKED"
+from emp
+order by MONTHS_WORKED;
+
+6.select ename||' earns '||sal||' monthly but wants '||sal*3 "Dream Salaries"
+from emp;
+
+7.select initcap(ename) "Name", length(ename) "Length of name"
+from emp
+where ename like 'J%' or ename like 'A%' or ename like 'M%';
+
+8.select ename,nvl(to_char(comm), 'No Commission') comm
+from emp;
+
+9.select ename||RPAD('*',TRUNC(sal/100), '*') "EMPLOYEE_AND_THEIR_SALARIES"
+from emp
+order by sal desc;

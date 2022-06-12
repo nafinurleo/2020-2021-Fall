@@ -1,0 +1,76 @@
+Name: Nafinur Leo
+Id: 20-42195-1
+
+Labtask 08
+
+1.select e.*, d.*
+from emp e, dept d
+where e.deptno=d.deptno
+and e.job in('MANAGER','CLERK')
+and d.dname in('ACCOUNTING','MARKETING');
+
+2.select e.*, d.*
+from emp e, dept d
+where e.deptno=d.deptno
+and e.job='SALESMAN'
+and d.loc<>'DALLAS';
+
+3.select d.dname, d.loc
+from emp e1, emp e2, dept d
+where e1.empno=e2.mgr
+and e1.ename='CLARK'
+and e2.deptno=d.deptno;
+
+4.select e.*, d.*
+from emp e, dept d
+where e.deptno=d.deptno
+and e.mgr is not null;
+
+5.select e.*, d.*
+from emp e, dept d
+where e.deptno=d.deptno
+and d.loc='DALLAS';
+
+7.select NVL(e.ename, 'No employee') "Employee Name", d.*
+from emp e, dept d
+where e.deptno(+)=d.deptno;
+
+8.select *
+from emp,dept
+where dept.deptno=emp.deptno(+);
+
+9.select *
+from emp,dept
+where emp.deptno(+)=dept.deptno and emp.deptno is NULL;
+
+10.select e1.ename "Employee Name", NVL(e2.ename, 'CEO') "Manager Name"
+from emp e1, emp e2
+where e1.mgr=e2.empno(+);
+
+11.select e2.*
+from emp e1, emp e2
+where e1.deptno=e2.deptno
+and e1.ename='SCOTT'
+and e2.ename<>'SCOTT';
+
+12.select e1.*, e2.*
+from emp e1, emp e2
+where e1.mgr=e2.empno
+and e1.hiredate<e2.hiredate;
+
+13.select e1.*, e2.*
+from emp e1, emp e2
+where e1.mgr=e2.empno
+and e1.sal>e2.sal;
+
+14.select e1.*, e2.*
+from emp e1, emp e2
+where e1.sal=e2.sal
+and e1.ename<>e2.ename;
+
+15.select e2.ename "Employee Name", e2.hiredate "Date of Joining", e3.ename "Manager Name", e3.hiredate "Manager's Date of Joining"
+from emp e1, emp e2, emp e3
+where e1.sal=e2.sal
+and e1.ename='SMITH'
+and e1.ename<>e2.ename
+and e2.mgr=e3.empno;

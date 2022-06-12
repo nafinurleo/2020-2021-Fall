@@ -1,0 +1,40 @@
+Name: Nafinur Leo
+Id: 20-42195-1
+
+Labtask 02
+
+1.select ename,sal
+from emp
+where sal>2850;
+
+2.select ename,empno,deptno
+from emp
+where empno='7566';
+
+3.select ename,job,hiredate
+from emp
+where hiredate between '20-FEB-81' and '01-MAY-81'
+order by hiredate asc;
+
+4.select ename,deptno
+from emp
+where deptno in(10,30)
+order by ename asc;
+
+5.select ename "Employee",sal "Monthly Salary"
+from emp
+where sal>1500
+and deptno in(10,30);
+
+6.select ename,hiredate
+from emp
+where hiredate between '01-JAN-82' and '31-DEC-82';
+
+7.select ename,job
+from emp
+where mgr is null;
+
+8.select ename,sal,comm
+from emp
+where comm>0
+order by sal desc,comm desc;

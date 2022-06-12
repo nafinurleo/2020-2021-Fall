@@ -1,0 +1,23 @@
+Name: Nafinur Leo
+Id: 20-42195-1
+
+Labtask 01
+
+1.select ename "name", deptno "department number"
+from emp;
+
+2.select distinct job "job"
+from emp
+where deptno = '30';
+
+3.select loc "location"
+from dept
+where deptno = '30';
+
+4.select ename "employee name", empno "employee number", comm "commission"
+from emp
+where comm>0;
+
+5.select ename "employee name", deptno "department number"
+from emp
+where ename LIKE '%A%';

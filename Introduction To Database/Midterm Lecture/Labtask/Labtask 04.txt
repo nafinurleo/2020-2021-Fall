@@ -1,0 +1,20 @@
+Name: Nafinur Leo
+Id: 20-42195-1
+
+Labtask 04
+
+1.select avg(sal),max(sal),min(sal)
+from emp;
+
+2.select avg(sal),max(sal),min(sal)
+from emp
+group by deptno;
+
+3.select avg(sal),max(sal),min(sal)
+from emp
+group by job;
+
+6.select job,sum(sal+NVL(comm,0)) "Total Salary"
+from emp
+group by job
+order by sum(sal+NVL(comm,0)) desc;
